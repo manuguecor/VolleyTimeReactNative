@@ -1,4 +1,3 @@
-// hooks/useUsuario.js
 import { useState, useEffect } from 'react';
 import * as SecureStore from 'expo-secure-store';
 
@@ -34,6 +33,22 @@ export const useUsers = () => {
     }
   };
 
+  const actualizarUsuario = async (datosActualizados) => {
+    try {
+      const data = await SecureStore.getItemAsync(CLAVE_USUARIO);
+      if (data) {
+        const usuarioActual = JSON.parse(data);
+        const usuarioActualizado = { ...usuarioActual, ...datosActualizados };
+        await SecureStore.setItemAsync(CLAVE_USUARIO, JSON.stringify(usuarioActualizado));
+        setUsuario(usuarioActualizado);
+      } else {
+        console.warn('No hay usuario guardado para actualizar');
+      }
+    } catch (error) {
+      console.error('Error actualizando usuario:', error);
+    }
+  };
+
   const borrarUsuario = async () => {
     try {
       await SecureStore.deleteItemAsync(CLAVE_USUARIO);
@@ -47,6 +62,7 @@ export const useUsers = () => {
     usuario,
     cargando,
     guardarUsuario,
+    actualizarUsuario,
     borrarUsuario,
     recargarUsuario: cargarUsuario,
   };

@@ -17,19 +17,20 @@ const Dashboard = () => {
       }}
       showsVerticalScrollIndicator={false}
     >
-      <View className="items-center">
-        <Text className="text-4xl font-bold text-white mb-4 text-center">
+      <View className="items-center gap-y-6">
+      <Text className="text-4xl font-extrabold text-white text-center leading-tight">
           Bienvenido a VolleyTime
         </Text>
-        <Text className="text-lg text-white text-center mb-8 leading-relaxed px-2">
-          Tu plataforma para organizar y reservar partidos y eventos de voley de forma rápida y sencilla.
+        <Text className="text-lg text-white text-center mb-8 leading-relaxed px-4">
+        Organiza y reserva partidos y eventos de voley de forma rápida y sencilla.
         </Text>
 
         {/* Carousel simulado con scroll horizontal */}
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
-          className="mb-8 space-x-4"
+          className="mb-6"
+          contentContainerStyle={{ gap: 16 }}
         >
           <Image
             source={{ uri: 'https://imgs.search.brave.com/46FLN9SCnApahDHSauyWNlyVam5phGkJDT3NR-Xk7BA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcy/LnJ0dmUuZXMvcC8x/MDAwNTQ3L2ltZ3Bv/cnRhZGEvP2g9NDAw' }}
@@ -48,22 +49,18 @@ const Dashboard = () => {
           />
         </ScrollView>
 
-        <Text className="text-white text-center mb-10 leading-relaxed px-2">
+        <Text className="text-white text-center mb-10 leading-relaxed px-4 mb-6">
           Nuestra plataforma conecta a jugadores y organizadores para crear una comunidad activa de voley.
           Ya sea que busques un partido amistoso o un torneo competitivo, aquí es donde empieza el juego. 
         </Text>
-      </View>
 
-      {/* <Link href="/home" asChild>
-        <Pressable className="border border-white rounded-full px-8 py-3 w-full max-w-xs self-center">
-          <Text className="text-white font-semibold text-lg text-center">Ir al Home</Text>
-        </Pressable>
-      </Link> */}
-      <Link href="/login" asChild>
+        <Link href="/login" asChild>
         <Pressable className="border border-white rounded-full px-8 py-3 w-full max-w-xs self-center">
           <Text className="text-white font-semibold text-lg text-center">Acceder</Text>
         </Pressable>
       </Link>
+      </View>
+     
     </ScrollView>
   )
 };

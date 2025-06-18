@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { View, Text, TextInput, Pressable, Alert, ActivityIndicator } from 'react-native';
 import { useRouter } from 'expo-router';
-import { useUsers } from '../../hooks/useUsers';
+import { useUsers } from '../../../hooks/useUsers';
 import { Link } from 'expo-router';
-
 
 const Login = () => {
   const [nombreUsuario, setNombreUsuario] = useState('');
@@ -27,12 +26,12 @@ const Login = () => {
       const usuarioEncontrado = data.find(
         (user) =>
           user.nombre_usuario === nombreUsuario &&
-          user.contrasena === contrasena // ← Asegúrate de que la API devuelve este campo
+          user.contrasena === contrasena 
       );
 
       if (usuarioEncontrado) {
         await guardarUsuario(usuarioEncontrado);
-        router.replace('drawer/tabs/home');
+        router.replace('/home');
       } else {
         Alert.alert('Credenciales incorrectas', 'Usuario o contraseña no válidos.');
       }
@@ -44,19 +43,17 @@ const Login = () => {
   };
 
   return (
-    // <View className="flex-1 bg-orange-500 items-center justify-center px-6">
-    <View className="flex-1 bg-orange-500 px-6 py-8  justify-around">
+ <View className="flex-1 bg-orange-500 px-6 pt-24 py-8 justify-between">
 
-         {/* Parte superior (formulario) */}
-    <View className="items-center">
-      <Text className="text-white text-3xl font-bold mb-6">Iniciar Sesión</Text>
+      <View className="items-center gap-y-4">
+      <Text className="text-white text-3xl font-extrabold mb-6">Iniciar Sesión</Text>
 
       <TextInput
         placeholder="Usuario"
         placeholderTextColor="#fff"
         value={nombreUsuario}
         onChangeText={setNombreUsuario}
-        className="bg-white/20 text-white px-4 py-2 rounded-full w-full mb-4"
+        className="bg-white/20 text-white px-4 py-3 rounded-full w-full"
       />
 
       <TextInput
@@ -65,7 +62,7 @@ const Login = () => {
         value={contrasena}
         onChangeText={setContrasena}
         secureTextEntry
-        className="bg-white/20 text-white px-4 py-2 rounded-full w-full mb-6"
+        className="bg-white/20 text-white px-4 py-3 rounded-full w-full mb-6"
       />
 
       <Pressable
@@ -76,21 +73,17 @@ const Login = () => {
         {cargando ? (
           <ActivityIndicator color="#f97316" />
         ) : (
-          <Text className="text-orange-500 font-semibold">Entrar</Text>
+          <Text className="text-orange-500 font-bold ">Entrar</Text>
         )}
       </Pressable>
       </View>
-
-
-        {/* Botón inferior */}
-    <View className="pt-10">
-        <Link href="/dashboard" asChild>
-          <Pressable className="border border-white rounded-full px-8 py-3 w-full max-w-xs self-center">
-            <Text className="text-white font-semibold text-lg text-center">Volver al Dashboard</Text>
-          </Pressable>
-        </Link>
+<View className="pb-12" >
+      <Link href="/dashboard" asChild>
+        <Pressable className="border border-white rounded-full px-8 py-3 w-full max-w-xs self-center">
+          <Text className="text-white font-semibold text-lg text-center">Volver a inicio</Text>
+        </Pressable>
+      </Link>
       </View>
-
     </View>
   );
 };

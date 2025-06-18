@@ -70,10 +70,6 @@ const Users = () => {
 
   return (
     <View className="flex-1 bg-orange-500 px-6 pt-12">
-      <Text className="text-3xl font-bold text-white text-center mb-6">
-        Listado de Jugadores
-      </Text>
-
       <FlatList
         data={visibleJugadores}
         keyExtractor={(item) => item.id.toString()}
@@ -82,6 +78,12 @@ const Users = () => {
         onEndReachedThreshold={0.5}
         showsVerticalScrollIndicator={false}
       />
+
+      <Link href="/home" asChild>
+          <Pressable className="border border-white rounded-full px-8 py-3 w-full max-w-xs self-center">
+            <Text className="text-white font-semibold text-lg text-center">Volver al Home</Text>
+          </Pressable>
+      </Link>
     </View>
   );
 };
