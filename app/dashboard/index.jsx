@@ -50,13 +50,18 @@ const Dashboard = () => {
 
         <Text className="text-white text-center mb-10 leading-relaxed px-2">
           Nuestra plataforma conecta a jugadores y organizadores para crear una comunidad activa de voley.
-          Ya sea que busques un partido amistoso o un torneo competitivo, aquí es donde empieza el juego.
+          Ya sea que busques un partido amistoso o un torneo competitivo, aquí es donde empieza el juego. 
         </Text>
       </View>
 
-      <Link href="/home" asChild>
+      {/* <Link href="/home" asChild>
         <Pressable className="border border-white rounded-full px-8 py-3 w-full max-w-xs self-center">
-          <Text className="text-white font-semibold text-lg text-center">Volver al Home</Text>
+          <Text className="text-white font-semibold text-lg text-center">Ir al Home</Text>
+        </Pressable>
+      </Link> */}
+      <Link href="/login" asChild>
+        <Pressable className="border border-white rounded-full px-8 py-3 w-full max-w-xs self-center">
+          <Text className="text-white font-semibold text-lg text-center">Acceder</Text>
         </Pressable>
       </Link>
     </ScrollView>

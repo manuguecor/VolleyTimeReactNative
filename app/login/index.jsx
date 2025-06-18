@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { View, Text, TextInput, Pressable, Alert, ActivityIndicator } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useUsers } from '../../hooks/useUsers';
+import { Link } from 'expo-router';
+
 
 const Login = () => {
   const [nombreUsuario, setNombreUsuario] = useState('');
@@ -30,7 +32,7 @@ const Login = () => {
 
       if (usuarioEncontrado) {
         await guardarUsuario(usuarioEncontrado);
-        router.replace('/dashboard');
+        router.replace('drawer/tabs/home');
       } else {
         Alert.alert('Credenciales incorrectas', 'Usuario o contraseña no válidos.');
       }
@@ -42,7 +44,11 @@ const Login = () => {
   };
 
   return (
-    <View className="flex-1 bg-orange-500 items-center justify-center px-6">
+    // <View className="flex-1 bg-orange-500 items-center justify-center px-6">
+    <View className="flex-1 bg-orange-500 px-6 py-8  justify-around">
+
+         {/* Parte superior (formulario) */}
+    <View className="items-center">
       <Text className="text-white text-3xl font-bold mb-6">Iniciar Sesión</Text>
 
       <TextInput
@@ -73,6 +79,18 @@ const Login = () => {
           <Text className="text-orange-500 font-semibold">Entrar</Text>
         )}
       </Pressable>
+      </View>
+
+
+        {/* Botón inferior */}
+    <View className="pt-10">
+        <Link href="/dashboard" asChild>
+          <Pressable className="border border-white rounded-full px-8 py-3 w-full max-w-xs self-center">
+            <Text className="text-white font-semibold text-lg text-center">Volver al Dashboard</Text>
+          </Pressable>
+        </Link>
+      </View>
+
     </View>
   );
 };

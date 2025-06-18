@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { View, Text, TextInput, Pressable, Alert, ScrollView, ActivityIndicator } from 'react-native';
 import { useRouter, Link } from 'expo-router';
-import { useUsers } from '../../hooks/useUsers';
+import { useUsers } from '../../../../hooks/useUsers';
 
 const UsersProfile = () => {
   const router = useRouter();
@@ -142,12 +142,6 @@ const UsersProfile = () => {
           </View>
         </>
       )}
-
-        <Link href="/home" asChild>
-          <Pressable className="border border-white rounded-full px-8 py-3 w-full max-w-xs self-center">
-            <Text className="text-white font-semibold text-lg text-center">Volver al Home</Text>
-          </Pressable>
-        </Link>
     </ScrollView>
   );
 };

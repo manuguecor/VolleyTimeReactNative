@@ -8,22 +8,22 @@ const Home = () => {
       <Text className="text-lg text-white text-center mb-8">
         Bienvenido a la app de voleibol definitiva.
       </Text>
-      <Link href="/login" asChild>
+      {/* <Link href="/login" asChild>
         <Pressable className="bg-white px-6 py-3 rounded-full">
           <Text className="text-orange-500 font-semibold">Login</Text>
         </Pressable>
-      </Link>
+      </Link> */}
       <Link href="/dashboard" asChild>
         <Pressable className="bg-white px-6 py-3 rounded-full">
           <Text className="text-orange-500 font-semibold">Ir al Dashboard</Text>
         </Pressable>
       </Link>
-      <Link href="/users" asChild>
+      <Link href="/drawer/users" asChild>
           <Pressable className="bg-white px-6 py-3 rounded-full">
             <Text className="text-orange-500 font-semibold">Ir al Users</Text>
           </Pressable>
       </Link>
-      <Link href="/usersProfile" asChild>
+      <Link href="/drawer/usersProfile" asChild>
         <Pressable className="bg-white px-6 py-3 rounded-full">
           <Text className="text-orange-500 font-semibold">Ir al Perfil</Text>
         </Pressable>
