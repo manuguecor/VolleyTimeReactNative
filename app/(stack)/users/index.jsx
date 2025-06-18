@@ -70,10 +70,6 @@ const Users = () => {
 
   return (
     <View className="flex-1 bg-orange-500 px-6 pt-12">
-      <Text className="text-3xl font-bold text-white text-center mb-6">
-        Listado de Jugadores
-      </Text>
-
       <FlatList
         data={visibleJugadores}
         keyExtractor={(item) => item.id.toString()}

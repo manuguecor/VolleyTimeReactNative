@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { View, Text, TextInput, Pressable, Alert, ActivityIndicator } from 'react-native';
 import { useRouter } from 'expo-router';
-import { useUsers } from '../../hooks/useUsers';
+import { useUsers } from '../../../hooks/useUsers';
 
 const Login = () => {
   const [nombreUsuario, setNombreUsuario] = useState('');

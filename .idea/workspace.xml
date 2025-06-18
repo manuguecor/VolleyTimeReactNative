@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b296806-8b24-4d7a-98d7-c0b6934c115e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/home/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(stack)/dashboard/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(stack)/home/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(stack)/login/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(stack)/users/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/usersProfile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(stack)/usersProfile/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useUsers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useUsers.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -47,22 +55,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "manuguecor"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;manuguecor&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/manuguecor/VolleyTimeReactNative.git",
-    "accountId": "3649491e-a760-491b-9e4d-dff917a0f7b9"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/manuguecor/VolleyTimeReactNative.git&quot;,
+    &quot;accountId&quot;: &quot;3649491e-a760-491b-9e4d-dff917a0f7b9&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2yXa7xhz90gHkVreFHvsEDJkx3B" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -71,19 +79,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\MANUEL\OneDrive - UNIR\Aplicaciones Móviles Multiplataforma\Actividades\Actividad 3\volleytime\app\dashboard" />
+      <recent name="C:\Users\MANUEL\OneDrive - UNIR\Aplicaciones Móviles Multiplataforma\Actividades\Actividad 3\volleytime\app\(stack)" />
       <recent name="C:\Users\MANUEL\OneDrive - UNIR\Aplicaciones Móviles Multiplataforma\Actividades\Actividad 3\volleytime\app" />
+      <recent name="C:\Users\MANUEL\OneDrive - UNIR\Aplicaciones Móviles Multiplataforma\Actividades\Actividad 3\volleytime\app\dashboard" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

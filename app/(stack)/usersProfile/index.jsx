@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { View, Text, TextInput, Pressable, Alert, ScrollView, ActivityIndicator } from 'react-native';
 import { useRouter, Link } from 'expo-router';
-import { useUsers } from '../../hooks/useUsers';
+import { useUsers } from '../../../hooks/useUsers';
 
 const UsersProfile = () => {
   const router = useRouter();
@@ -101,7 +101,6 @@ const UsersProfile = () => {
 
   return (
     <ScrollView className="flex-1 bg-orange-500 px-6 pt-12">
-      <Text className="text-3xl font-bold text-white mb-6 text-center">Mi Perfil</Text>
 
       {editando ? (
         <>
