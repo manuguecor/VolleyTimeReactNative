@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList } from 'react-native';
-import {useReservas} from '../../../hooks/useReservas';
-import { useUsers } from '../../../hooks/useUsers';
+import {useReservas} from '../../../../../hooks/useReservas';
+import { useUsers } from '../../../../../hooks/useUsers';
 
 const Reservas = () => {
   const { usuario} = useUsers();

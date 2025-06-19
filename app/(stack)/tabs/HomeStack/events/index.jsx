@@ -7,7 +7,7 @@ import {
   Alert,
   TouchableOpacity,
 } from 'react-native';
-import { useUsers } from '../../../hooks/useUsers';
+import { useUsers } from '../../../../../hooks/useUsers';
 
 const EventoItem = ({ evento, userId }) => {
   const [estadoEvento, setEstadoEvento] = useState(evento);

@@ -16,8 +16,8 @@ const StackLayout = () => {
                 },
             }}
         >
-            <Stack.Screen name="tabs/home/index" options={{
-                title: "Home"
+            <Stack.Screen name="tabs/index" options={{
+                title: ""
             }}>
             </Stack.Screen>
             <Stack.Screen name="dashboard/index" options={{
@@ -28,19 +28,19 @@ const StackLayout = () => {
                 title: "Iniciar sesión"
             }}>
             </Stack.Screen>
-            <Stack.Screen name="users/index" options={{
-                title: "Jugadores"
+            <Stack.Screen name="tabs/HomeStack/users/index" options={{
+                title: "Usuarios"
             }}>
             </Stack.Screen>
             <Stack.Screen name="tabs/usersProfile/index" options={{
                 title: "Mi perfil"
             }}>
                  </Stack.Screen>
-                 <Stack.Screen name="reservations/index" options={{
+                 <Stack.Screen name="tabs/HomeStack/reservations/index" options={{
                 title: "Reservas"
             }}>
                  </Stack.Screen>
-                 <Stack.Screen name="events/index" options={{
+                 <Stack.Screen name="tabs/HomeStack/events/index" options={{
                 title: "Eventos"
             }}></Stack.Screen>
         

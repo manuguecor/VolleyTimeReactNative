@@ -141,12 +141,6 @@ const UsersProfile = () => {
           </View>
         </>
       )}
-
-        <Link href="/home" asChild>
-          <Pressable className="border border-white rounded-full px-8 py-3 w-full max-w-xs self-center">
-            <Text className="text-white font-semibold text-lg text-center">Volver al Home</Text>
-          </Pressable>
-        </Link>
     </ScrollView>
   );
 };
