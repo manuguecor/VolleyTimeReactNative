@@ -50,7 +50,7 @@ const Login = () => {
  <View className="flex-1 bg-orange-500 px-6 pt-24 py-8 justify-between">
 
       <View className="items-center gap-y-4">
-      <Text className="text-white text-3xl font-extrabold mb-6">Iniciar Sesión</Text>
+      <Text className="text-white text-3xl font-extrabold mb-6"   style={{ fontFamily: 'Montserrat-Regular' }}>Iniciar Sesión</Text>
 
       <TextInput
         placeholder="Usuario"
@@ -80,7 +80,7 @@ const Login = () => {
         {cargando ? (
           <ActivityIndicator color="#f97316" />
         ) : (
-          <Text className="text-orange-500 font-bold ">Entrar</Text>
+          <Text className="text-orange-500 font-bold">Entrar</Text>
         )}
       </Pressable>
       </View>

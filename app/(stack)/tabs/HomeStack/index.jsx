@@ -2,11 +2,13 @@ import { View, Text, Pressable, ScrollView } from 'react-native';
 import { Link } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useUsers } from '../../../../hooks/useUsers';
+import PrivateRoute from '../../../PrivateRoute';
 
 const HomeScreen = () => {
   const { usuario } = useUsers();
 
   return (
+    <PrivateRoute>
     <ScrollView
       contentContainerStyle={{
         flexGrow: 1,
@@ -50,6 +52,7 @@ const HomeScreen = () => {
         </View>
       </View>
     </ScrollView>
+    </PrivateRoute>
   );
 };
 

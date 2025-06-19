@@ -18,7 +18,7 @@ const Dashboard = () => {
       showsVerticalScrollIndicator={false}
     >
       <View className="items-center gap-y-6">
-      <Text className="text-4xl font-extrabold text-white text-center leading-tight">
+      <Text className="text-4xl font-extrabold text-white text-center leading-tight" style={{ fontFamily: 'Montserrat-Regular' }}>
           Bienvenido a VolleyTime
         </Text>
         <Text className="text-lg text-white text-center mb-8 leading-relaxed px-4">

@@ -10,7 +10,7 @@ const Reservas = () => {
   if (loading) {
     return (
       <View className="p-4 mt-8">
-        <Text className="text-base">Cargando reservas...</Text>
+        <Text className="text-base" style={{ fontFamily: 'Rasa-VariableFont' }}>Cargando reservas...</Text>
       </View>
     );
   }
@@ -18,7 +18,7 @@ const Reservas = () => {
   if (error) {
     return (
       <View className="p-4 mt-8">
-        <Text className="text-base text-red-600">Error: {error}</Text>
+        <Text className="text-base text-red-600" style={{ fontFamily: 'Rasa-VariableFont' }}>Error: {error}</Text>
       </View>
     );
   }
@@ -40,7 +40,7 @@ const Reservas = () => {
   return (
     <View className="flex-1 bg-orange-500 px-6 pt-12">
       {reservas.length === 0 ? (
-        <Text className="text-base">No tienes reservas activas.</Text>
+        <Text className="text-base" style={{ fontFamily: 'Rasa-VariableFont' }}>No tienes reservas activas.</Text>
       ) : (
         <FlatList
           data={reservas}

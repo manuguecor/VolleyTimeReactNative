@@ -4,10 +4,12 @@ import Home from './HomeStack';
 import Profile from './usersProfile';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+
 const Tab = createBottomTabNavigator();
 
 export default function MainTabs() {
   return (
+
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color, size }) => {

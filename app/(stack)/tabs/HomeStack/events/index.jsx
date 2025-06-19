@@ -150,7 +150,7 @@ const Eventos = () => {
   }
 
   return (
-    <View className="flex-1 bg-orange-500 px-6 pt-12">
+        <View className="flex-1 bg-orange-500 px-6 pt-12">
       <FlatList
         data={eventos}
         keyExtractor={(item) => item.id.toString()}

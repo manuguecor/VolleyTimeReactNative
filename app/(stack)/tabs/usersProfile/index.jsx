@@ -94,7 +94,7 @@ const UsersProfile = () => {
   if (!usuario) {
     return (
       <View className="flex-1 items-center justify-center bg-orange-500 px-6">
-        <Text className="text-white text-lg">No se encontró el usuario.</Text>
+        <Text className="text-white text-lg" style={{ fontFamily: 'Rasa-VariableFont' }}>No se encontró el usuario.</Text>
       </View>
     );
   }
@@ -102,7 +102,7 @@ const UsersProfile = () => {
   return (
     <ScrollView className="flex-1 bg-orange-500 px-6 pt-12">
 
-        <Text className="text-white text-3xl font-bold text-center mb-6">
+        <Text className="text-white text-3xl font-bold text-center mb-6" style={{ fontFamily: 'Montserrat-Regular' }}>
             Mi perfil
         </Text>
 

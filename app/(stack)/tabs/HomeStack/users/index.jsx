@@ -34,7 +34,7 @@ const Users = () => {
     return (
       <View className="flex-1 justify-center items-center bg-orange-500 px-4">
         <ActivityIndicator size="large" color="#fff" />
-        <Text className="mt-4 text-white text-lg">Cargando jugadores...</Text>
+        <Text className="mt-4 text-white text-lg" style={{ fontFamily: 'Rasa-VariableFont' }}>Cargando jugadores...</Text>
       </View>
     );
   }
@@ -42,7 +42,7 @@ const Users = () => {
   if (error) {
     return (
       <View className="flex-1 justify-center items-center bg-orange-500 px-4">
-        <Text className="text-white font-semibold text-lg text-center">
+        <Text className="text-white font-semibold text-lg text-center" style={{ fontFamily: 'Rasa-VariableFont' }}>
           Error: {error}
         </Text>
       </View>
