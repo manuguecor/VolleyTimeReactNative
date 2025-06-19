@@ -31,7 +31,7 @@ const Login = () => {
 
       if (usuarioEncontrado) {
         await guardarUsuario(usuarioEncontrado);
-        router.replace('/home');
+        router.replace('tabs/home');
       } else {
         Alert.alert('Credenciales incorrectas', 'Usuario o contraseña no válidos.');
       }

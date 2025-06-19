@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { View, Text, TextInput, Pressable, Alert, ScrollView, ActivityIndicator } from 'react-native';
 import { useRouter, Link } from 'expo-router';
-import { useUsers } from '../../../hooks/useUsers';
+import { useUsers } from '../../../../hooks/useUsers';
 
 const UsersProfile = () => {
   const router = useRouter();

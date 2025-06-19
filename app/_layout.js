@@ -11,7 +11,8 @@ const RootLayout = () => {
     // Cargamos las fuentes necesarias para la aplicación
 
     const [fontsLoaded, error] = useFonts({
-        'Rasa-VariableFont': require('../assets/fonts/Rasa-VariableFont.ttf')
+        'Rasa-VariableFont': require('../assets/fonts/Rasa-VariableFont.ttf'),
+        'Montserrat-Regular': require('../assets/fonts/Montserrat-Regular.ttf')
     });
 
     // Ocultamos el SplashScreen cuando las fuentes estén cargadas

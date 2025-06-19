@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { View, Text, ActivityIndicator, FlatList, Pressable } from 'react-native';
-import { Link } from 'expo-router';
 
 const PAGE_SIZE = 5;
 
@@ -42,10 +41,8 @@ const Users = () => {
 
   const renderItem = ({ item }) => (
     <View className="bg-white rounded-xl p-4 mb-4 shadow-md w-full">
-      <Text className="text-orange-500 font-semibold">Usuario:</Text>
-      <Text className="mb-2 text-gray-700">{item.nombre_usuario}</Text>
-      <Text className="text-orange-500 font-semibold">Nombre:</Text>
-      <Text className="text-gray-700">{item.nombre} {item.apellidos}</Text>
+      <Text className="text-orange-500 font-semibold">Usuario:  <Text className="mb-2 text-gray-700">{item.nombre_usuario}</Text></Text>
+      <Text className="text-orange-500 font-semibold">Nombre:  <Text className="text-gray-700">{item.nombre} {item.apellidos}</Text></Text>
     </View>
   );
 
@@ -78,12 +75,6 @@ const Users = () => {
         onEndReachedThreshold={0.5}
         showsVerticalScrollIndicator={false}
       />
-
-      <Link href="/home" asChild>
-          <Pressable className="border border-white rounded-full px-8 py-3 w-full max-w-xs self-center">
-            <Text className="text-white font-semibold text-lg text-center">Volver al Home</Text>
-          </Pressable>
-      </Link>
     </View>
   );
 };
