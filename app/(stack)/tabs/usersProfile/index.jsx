@@ -116,10 +116,10 @@ const UsersProfile = () => {
           ))}
 
           <View className="flex-row justify-between space-x-3 mt-2">
-            <Pressable onPress={handleGuardar} className="flex-1 bg-white px-4 py-3 rounded-full items-center">
+            <Pressable onPress={handleGuardar} className="bg-white flex-row items-center justify-between px-6 py-4 rounded-xl shadow-md mt-10">
               <Text className="text-orange-500 font-semibold">Guardar</Text>
             </Pressable>
-            <Pressable onPress={() => setEditando(false)} className="flex-1 bg-white/20 px-4 py-3 rounded-full items-center">
+            <Pressable onPress={() => setEditando(false)} className="bg-white/20 flex-row items-center justify-between px-6 py-4 rounded-xl shadow-md mt-10">
               <Text className="text-white font-semibold">Cancelar</Text>
             </Pressable>
           </View>
@@ -132,10 +132,10 @@ const UsersProfile = () => {
           <Text className="text-white mb-6"><Text className="font-bold">Usuario:</Text> {usuario.nombre_usuario}</Text>
 
           <View className="flex-row justify-between space-x-3">
-            <Pressable onPress={() => setEditando(true)} className="flex-1 bg-white px-4 py-3 rounded-full items-center">
+            <Pressable onPress={() => setEditando(true)} className="bg-white flex-row items-center justify-center px-6 py-4 rounded-xl shadow-md mt-10">
               <Text className="text-orange-500 font-semibold">Modificar</Text>
             </Pressable>
-            <Pressable onPress={handleBorrar} className="flex-1 bg-red-600 px-4 py-3 rounded-full items-center">
+            <Pressable onPress={handleBorrar} className="bg-red-600 flex-row items-center justify-center px-6 py-4 rounded-xl shadow-md mt-10">
               <Text className="text-white font-semibold">Borrar Perfil</Text>
             </Pressable>
           </View>

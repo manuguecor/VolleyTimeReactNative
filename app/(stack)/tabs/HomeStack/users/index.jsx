@@ -1,12 +1,8 @@
 import { useEffect, useState } from 'react';
-import { View, Text, ActivityIndicator, FlatList, Pressable } from 'react-native';
-
-const PAGE_SIZE = 5;
+import { View, Text, ActivityIndicator, FlatList } from 'react-native';
 
 const Users = () => {
   const [jugadores, setJugadores] = useState([]);
-  const [visibleJugadores, setVisibleJugadores] = useState([]);
-  const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -18,7 +14,6 @@ const Users = () => {
       })
       .then((data) => {
         setJugadores(data);
-        setVisibleJugadores(data.slice(0, PAGE_SIZE));
         setLoading(false);
       })
       .catch((err) => {
@@ -27,17 +22,6 @@ const Users = () => {
       });
   }, []);
 
-  const loadMore = () => {
-    const nextPage = page + 1;
-    const start = (nextPage - 1) * PAGE_SIZE;
-    const end = start + PAGE_SIZE;
-    const moreItems = jugadores.slice(start, end);
-
-    if (moreItems.length > 0) {
-      setVisibleJugadores(prev => [...prev, ...moreItems]);
-      setPage(nextPage);
-    }
-  };
 
   const renderItem = ({ item }) => (
     <View className="bg-white rounded-xl p-4 mb-4 shadow-md w-full">
@@ -68,11 +52,9 @@ const Users = () => {
   return (
     <View className="flex-1 bg-orange-500 px-6 pt-12">
       <FlatList
-        data={visibleJugadores}
+        data={jugadores}
         keyExtractor={(item) => item.id.toString()}
         renderItem={renderItem}
-        onEndReached={loadMore}
-        onEndReachedThreshold={0.5}
         showsVerticalScrollIndicator={false}
       />
     </View>

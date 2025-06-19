@@ -3,6 +3,7 @@ import { View, Text, TextInput, Pressable, Alert, ActivityIndicator } from 'reac
 import { useRouter } from 'expo-router';
 import { useUsers } from '../../../hooks/useUsers';
 import { Link } from 'expo-router';
+import * as Haptics from 'expo-haptics';
 
 const Login = () => {
   const [nombreUsuario, setNombreUsuario] = useState('');
@@ -31,11 +32,14 @@ const Login = () => {
 
       if (usuarioEncontrado) {
         await guardarUsuario(usuarioEncontrado);
+        await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
         router.replace('/tabs');
       } else {
+        await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
         Alert.alert('Credenciales incorrectas', 'Usuario o contraseña no válidos.');
       }
     } catch (error) {
+      await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
       Alert.alert('Error', 'No se pudo conectar con el servidor.');
     } finally {
       setCargando(false);
@@ -66,7 +70,10 @@ const Login = () => {
       />
 
       <Pressable
-        onPress={handleLogin}
+        onPress={async () => {
+            await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+            handleLogin();
+        }}
         className="bg-white px-6 py-3 rounded-full w-full items-center"
         disabled={cargando}
       >
