@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeStack from './HomeStack';
+import Home from './HomeStack';
 import Profile from './usersProfile';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -12,8 +12,8 @@ export default function MainTabs() {
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color, size }) => {
           let iconName;
-          if (route.name === 'Home') iconName = 'home-outline';
-          else if (route.name === 'Profile') iconName = 'person-outline';
+          if (route.name === 'Inicio') iconName = 'home-outline';
+          else if (route.name === 'Mi perfil') iconName = 'person-outline';
           return <Ionicons name={iconName} size={size} color={color} />;
         },
         tabBarActiveTintColor: '#f97316',
@@ -21,8 +21,8 @@ export default function MainTabs() {
         headerShown: false,
       })}
     >
-      <Tab.Screen name="Home" component={HomeStack} />
-      <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Screen name="Inicio" component={Home} />
+      <Tab.Screen name="Mi perfil" component={Profile} />
     </Tab.Navigator>
   );
 }

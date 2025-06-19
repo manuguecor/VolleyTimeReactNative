@@ -1,19 +1,56 @@
-import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';           
-import Events from './events';
-import HomeScreen from './home';
-import Reservations from './reservations';
-import Users from './users';
+import { View, Text, Pressable, ScrollView } from 'react-native';
+import { Link } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
+import { useUsers } from '../../../../hooks/useUsers';
 
-const Stack = createNativeStackNavigator();
+const HomeScreen = () => {
+  const { usuario } = useUsers();
 
-export default function HomeStack() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Events" component={Events} />
-      <Stack.Screen name="Reservations" component={Reservations} />
-      <Stack.Screen name="Users" component={Users} />
-    </Stack.Navigator>
+    <ScrollView
+      contentContainerStyle={{
+        flexGrow: 1,
+        backgroundColor: '#f97316',
+        paddingHorizontal: 24,
+        paddingVertical: 32,
+        justifyContent: 'space-between',
+      }}
+      showsVerticalScrollIndicator={false}
+    >
+      <View className="items-center">
+        <Text className="text-white text-3xl font-bold text-center mb-6">
+          ¡Hola, {usuario?.nombre_usuario || 'jugador'}!
+        </Text>
+
+        <Text className="text-white text-center text-lg mb-10 leading-relaxed">
+          Elige tu próxima jugada
+        </Text>
+
+        <View className="space-y-4 w-full">
+          <Link href="tabs/HomeStack/events" asChild>
+            <Pressable className="bg-white flex-row items-center justify-between px-6 py-4 rounded-xl shadow-md mt-10">
+              <Text className="text-orange-500 font-semibold text-lg">Ver Eventos</Text>
+              <Ionicons name="calendar-outline" size={24} color="#f97316" />
+            </Pressable>
+          </Link>
+
+          <Link href="tabs/HomeStack/reservations" asChild>
+            <Pressable className="bg-white flex-row items-center justify-between px-6 py-4 rounded-xl shadow-md mt-10">
+              <Text className="text-orange-500 font-semibold text-lg">Mis Reservas</Text>
+              <Ionicons name="bookmark-outline" size={24} color="#f97316" />
+            </Pressable>
+          </Link>
+
+          <Link href="tabs/HomeStack/users" asChild>
+            <Pressable className="bg-white flex-row items-center justify-between px-6 py-4 rounded-xl shadow-md mt-10">
+              <Text className="text-orange-500 font-semibold text-lg">Usuarios</Text>
+              <Ionicons name="people-outline" size={24} color="#f97316" />
+            </Pressable>
+          </Link>
+        </View>
+      </View>
+    </ScrollView>
   );
-}
+};
+
+export default HomeScreen;

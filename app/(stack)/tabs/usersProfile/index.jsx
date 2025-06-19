@@ -102,6 +102,10 @@ const UsersProfile = () => {
   return (
     <ScrollView className="flex-1 bg-orange-500 px-6 pt-12">
 
+        <Text className="text-white text-3xl font-bold text-center mb-6">
+            Mi perfil
+        </Text>
+
       {editando ? (
         <>
           {['nombre', 'apellidos', 'correo', 'nombre_usuario'].map((field) => (
